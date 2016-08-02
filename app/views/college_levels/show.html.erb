@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>College level:</strong>
+  <%= @college_level.college_level_name%>
+</p>
+<p>
+  <strong>Degree:</strong>
+  <%= @college_level.degree.degree_name if @college_level.degree %>
+</p>
+
+
+    <% @college_level.subjects.each do |subject| %>
+    <%= link_to subject.subject_name, subject_path(subject)%>
+
+    <% end %>
+
+
+<%= link_to 'Edit', edit_college_level_path(@college_level) %> |
+<%= link_to 'Back', college_levels_path %>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang ="pl">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>EPI</title>
+	<%
+  base_path = '/13_krzysztofik/infoepi'
+  if ENV['PROJECT'] =~ /editor/i
+    base_path << "/#{Rails.root.basename.to_s}/"
+  end
+  base_path << Rails.application.config.assets.prefix
+  base_path << '/ckeditor/'
+  puts "#{base_path}"
+%>
+	<script>var CKEDITOR_BASEPATH = '<%= base_path %>';</script>
+      	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+      	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+        <!--Import Google Icon Font-->
+        <link href='https://fonts.googleapis.com/css?family=Lato:300,500,700' rel='stylesheet' type='text/css'>
+        <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <% if notice %>
+  <script type="text/javascript">
+ Materialize.toast('<%= notice %>', 4000)
+</script>
+  	<% end %>
+  	<% if alert %>
+    <script type="text/javascript">
+    Materialize.toast('<%= alert %>', 4000)
+  </script>
+  	<% end %>
+    <script>
+    $( document ).ready(function(){$(".button-collapse").sideNav();})
+
+    </script>
+    <%= render "home/navbar_index" %>
+    <div id="logo">
+        <div class="row">
+          <%= yield %>
+        </div>
+    </div>
+<%= link_to home_index_path, class: "waves-effect waves-light grey btn-large backspace" do %>
+  <%= image_tag "backspace.png", :class => "enterArrow" %>
+  powrót
+<% end %>
+</body>
+</html>

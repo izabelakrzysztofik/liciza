@@ -1,0 +1,66 @@
+<div class="col s12 valign-wrapper content">
+
+  <div class="col l6 offset-l6 s12 valign">
+    <h1>
+      Elektroniczne Przetwarzanie Informacji
+    </h1>
+  </div>
+  <%= link_to home_index_path, class: "waves-effect waves-light grey btn-large enter" do %>
+    <%= image_tag "enter.png", :class => "enterArrow" %>
+    rozpocznij
+  <% end %>
+</div>
+
+<div class="col s12 nammeDiv">
+  <div class="col s10 offset-s1 center-align">
+    <h2 id="namme">
+        Jak korzystać z serwisu?
+    </h2>
+  </div>
+</div>
+
+<div class="col s8 offset-s2 description">
+
+  <h2 style="text-align: center;"><strong> Witam Cię na mojej stronie!</strong></h2>
+  <p><br /> Chciałabym przedstawić Ci podstawowe informacje dotyczące korzystania z niniejszego serwisu internetowego.</p>
+  <p>Jeżeli trafiłeś na tą stronę, to znaczy, że jesteś zainteresowany studiami na kierunku Elektroniczne Przetwarzanie Informacji lub jesteś studentem tego kierunku i chcesz dowiedzieć się czegoś więcej na temat przedmiot&oacute;w.&nbsp;</p>
+  <p>Tutaj dowiesz się <strong>jak korzystać z serwisu</strong>.</p>
+  <p>Jeżeli chciałbyś dowiedzieć się dla kogo jest stworzony serwis oraz z jakimi informacjami możesz się zapoznać podczas korzystania z aplikacji, wr&oacute;ć na stronę gł&oacute;wną. Tam znajdują się pozostałe informacje.</p><br>
+
+  <h4 style="text-align: center;"><strong>Jak znaleźć informacje o przedmiocie?&nbsp;</strong></h4><br>
+
+  <p>Na stronie gł&oacute;wnej znajduje się Panel Wyboru Przedmiotu. Mechanizm Wyboru Przedmiotu został podzielony jest na trzy etapy.</p><br><br>
+
+  <br><h4 style="text-align: center;">Krok I</h4><br>
+  <p>Wybierz interesujący Cię&nbsp;&ldquo;I stopień&rdquo; lub &ldquo;II stopień&rdquo;</p>
+  <p>Możesz także skorzystać z przycisku &ldquo;Enter&rdquo;, aby otrzymać wskaz&oacute;wkę</p>
+
+
+  <br><h4 style="text-align: center;">Krok II</h4><br>
+  <p>Jak wybierzesz&nbsp;interesujący Cię poziom studi&oacute;w, zostaniesz przekierowany do następnej podstrony z panelem.</p>
+  <p><span style="font-weight: 400;">Tym razem zostaną wyświetlone przyciski z numerami rocznik&oacute;w. </span></p>
+  <p><span style="font-weight: 400;">Do przycisku &ldquo;Enter&rdquo; dochodzi na tej podstronie także przycisk &ldquo;Powr&oacute;t&rdquo;, pozwalający na przejście do poprzedniej strony, aby zmienić swoje preferencje.</span></p>
+  <p><span style="font-weight: 400;"> Po wybraniu odpowiedniego przycisku z numerem rocznika, zostaniesz przekierowany do Listy Przedmiot&oacute;w.</span></p>
+
+  <br><h4 style="text-align: center;">Krok III</h4><br>
+  <p>Twoim ostatnim zadaniem jest wyb&oacute;r jednego z wyświetlonych przedmiot&oacute;w.</p>
+  <p><span style="font-weight: 400;">Po tym zostaniesz przekierowany&nbsp;do strony, w kt&oacute;rej znajduje się charakterystyka wybranego przedmiotu wraz z najważniejszymi informacjami. </span></p><br><br>
+
+  <p style="text-align: center;"><strong>Powodzenia!&nbsp;</strong></p><br>
+  <p style="text-align: center;">Pamiętaj, że na każdej podstronie znajduje się przycisk <strong>"Enter"</strong>, kt&oacute;ry wskaże Ci właściwą drogę do celu!&nbsp;</p>
+
+
+
+</div>
+
+<script>
+
+$( document ).ready(function() {
+  $('.backspace').remove();
+  setTimeout(function(){
+    $('html, body').animate({
+        scrollTop: $("#namme").offset().top-100
+    }, 2000);
+  }, 1000);
+});
+</script>

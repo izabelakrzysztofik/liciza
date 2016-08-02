@@ -1,0 +1,324 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "materialize";
+@import "materialize/components/color";
+@import "materialize/extras/nouislider";
+
+html {
+  background: url('tlo2.png');
+}
+html,body,.container,.row,#logo {
+  width: 100%;
+  height: 100%;
+  margin: 0 !important;
+}
+.btn, .btn-large {
+    background: url('pusty.png') no-repeat center center scroll;
+    border-radius: 10px;
+}
+
+/* H1... */
+#logo > div > div > div > h1 {
+  color: white;
+}
+h3 {
+  padding: 0px 0px 0px 250px;
+  color: white;
+}
+
+/* Menu */
+nav {
+  background: #f68d3c !important;
+  height: 45px;
+
+}
+
+p {
+    font-size: 14px;
+}
+
+.navbar-fixed {
+  height: 20px;
+}
+.nav-wrapper {
+  height: 45px;
+}
+.nav-mobile {
+  height: 45px;
+}
+#mobile-demo a {
+    color: #000;
+}
+nav ul a:visited {
+  color: #fff;
+}
+nav ul a {
+    transition: background-color .3s;
+    font-size: 1.2rem;
+    color: #fff;
+    display: block;
+    padding: 12px 40px 15px 40px;
+    cursor: pointer;
+}
+
+/* Forms */
+
+.input-field label {
+    color: white;
+    font-weight: bolder;
+  }
+.input-field input[type=text],
+input[type=email],
+input[type=password] {
+    border-bottom: 1px solid white;
+}
+
+  /* label focus color */
+.input-field input[type=text]:focus + label,
+input[type=email]:focus + label {
+    color: #000;
+        border-bottom: 1px solid white;
+  }
+  label[for=subject_description]{
+    margin-top: -15px;
+  }
+  /* label underline focus color */
+.input-field input[type=text]:focus ,
+input[type=password]:focus:not([readonly]),
+input[type=email]:focus:not([readonly]) {
+    border-bottom: 2px solid #f68d3c;
+    box-shadow: 0 1px 0 0 #f68d3c;
+  }
+  /* valid color */
+.input-field input[type=text].valid,
+input[type=email].valid {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+  }
+  /* invalid color */
+.input-field input[type=text].invalid,
+  input[type=email].invalid{
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+  }
+  /* icon prefix focus color */
+.input-field .prefix.active {
+    color: #000;
+  }
+
+/* Logo*/
+#logo {
+    background-size: cover !important;
+    background: url('izkidziadostwo.png') no-repeat top center scroll;
+    background-position-y: -2px;
+}
+
+/* Buttons */
+.btn, .btn-large {
+    background: url('pusty.png') no-repeat center center scroll;
+    border-radius: 6px;
+    text-transform: none;
+    color: #000;
+    width: 160px;
+    height: 64px;
+    line-height: 76px;
+}
+a.btn {
+  margin: 10px;
+}
+a.btn:visited,
+a.btn-large:visited {
+  color: #000;
+}
+a.btn:hover,
+a.btn-large:hover,
+button:hover{
+  color: #c3c3c3;
+}
+.position-button {
+  margin-left: 35px;
+}
+.modal-footer .btn{
+  margin-right: 30px !important;
+  margin-bottom: 30px !important;
+}
+#logo > div > div > a.waves-effect.waves-light.grey.btn-large {
+  border: 1px ridge #bfbfbf;
+  padding: 10px 10px 10px 40px;
+}
+#logo a,
+#logo button {
+    border: 1px ridge #bfbfbf;
+    padding: 5px 10px 0px 50px;
+    font-size: 15px;
+}
+.description a {
+    border: 0 !important;
+}
+#logo > div > div.col.s8.offset-s2.description > ul > li > a {
+   border: none;
+   padding: 0;
+   font-size: 15px;
+}
+.subject a{
+  border: none !important;
+  padding: 0 !important;
+  font-size: 18px !important;
+  color: white;
+  -moz-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+.subject a:hover{
+  background: none;
+  color: #555;
+}
+.button-div {
+  padding: 250px 0px 10px 100px;
+}
+.button-div2 {
+  padding: 10px 0px 10px 250px;
+}
+.enter {
+  width: 132px;
+  text-align: right;
+  position: fixed;
+  bottom: 121px;
+  right: 30px;
+}
+.backspace {
+  width: 132px;
+  text-align: right;
+  position: fixed;
+  top: 181px;
+  right: 30px;
+  border: 1px ridge #bfbfbf;
+  padding: 5px 10px 0px 50px;
+  font-size: 15px;
+}
+.menu-ham {
+  width: 35px;
+  margin: 6px;
+}
+
+/* enter arrow */
+.enterArrow {
+  width: 20px;
+  position: absolute;
+  bottom: 15px;
+  left: 8px;
+}
+.button-collapse:hover {
+  background: transparent;
+}
+
+/* Explanations */
+  .field_with_errors {
+    padding: 1px;
+    background-color: transparent;
+    display: table;
+  }
+
+  #error_explanation {
+    width: 450px;
+    border: 0;
+    padding: 7px;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+    h2 {
+      text-align: left;
+      font-weight: bold;
+      padding: 5px 5px 5px 15px;
+      font-size: 12px;
+      margin: -7px;
+      margin-bottom: 0px;
+      background-color: #c00;
+      color: #fff;
+    }
+    ul li {
+      font-size: 12px;
+      list-style: square;
+    }
+  }
+
+  /* dropdown list */
+
+  .dropdown-content li > a,
+  .dropdown-content li > span {
+      color: #f68d3c;
+  }
+
+  .description {
+    background: white;
+    color: black;
+    margin-bottom: 30px;
+  }
+
+  #namme {
+    color:#000;
+    margin: 0;
+    padding: 30px 0
+  }
+
+  .nammeDiv{
+    background:white;
+    margin-bottom: 70px;
+  }
+
+  .content {
+    height: 90%;
+  }
+
+  .finherit {
+    float: inherit;
+  }
+
+  .mt100 {
+    margin-top: 100px
+  }
+
+@media only screen and (min-width: 601px) {
+  .navbar-fixed {
+      height: 45px;
+  }
+}
+//TABLETY
+@media only screen
+and (max-width: 992px)
+and (min-width : 601px) {
+  .enter {
+    position: relative;
+    bottom: 0;
+    right: 0;
+  }
+  #logo{
+    background: grey;
+  }
+}
+//KOMÓRKI
+@media only screen
+and (max-width: 600px){
+  .enter {
+    position: relative;
+    bottom: 0;
+    right: 0;
+  }
+  #logo{
+    background: grey;
+  }
+}

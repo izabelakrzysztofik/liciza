@@ -1,0 +1,38 @@
+<div class="col s12 content">
+<div class="col l6 offset-l6 s12">
+  <h1>
+    <%= @subject.subject_name %>
+  </h1>
+</div>
+
+  <% if admin_signed_in? %>
+<div class="col l6 offset-l6 s12" style="float: inherit;">
+  <%= link_to 'Edytuj', edit_subject_path(@subject), :class => "btn" %>
+  <%= link_to 'Usuń', @subject, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn" %>
+</div>
+<% end %>
+
+</div>
+
+<div class="col s12 nammeDiv">
+  <div class="col s10 offset-s1 center-align">
+    <h2 id="namme">
+      Charakterystyka przedmiotu
+    </h2>
+  </div>
+</div>
+
+<div class="col s8 offset-s2 description">
+
+    <%= raw(@subject.description) %>
+</div>
+
+<script>
+$( document ).ready(function() {
+  setTimeout(function(){
+    $('html, body').animate({
+        scrollTop: $("#namme").offset().top-80
+    }, 2000);
+  }, 1000);
+});
+</script>

@@ -1,0 +1,13 @@
+<div class="col s12 content">
+  <div class="col l6 offset-l6 s12 subject">
+    <h1>Wybierz przedmiot</h1>
+    <% @subjects.each do |subject| %>
+
+      <%= link_to subject.subject_name, subject %>
+      </br>
+
+    <% end %>
+  </div>
+
+
+  </div>

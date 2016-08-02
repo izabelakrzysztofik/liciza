@@ -1,0 +1,28 @@
+<%= form_for(@college_level) do |f| %>
+  <% if @college_level.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@college_level.errors.count, "error") %> prohibited this college_level from being saved:</h2>
+
+      <ul>
+      <% @college_level.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :college_level_name %><br>
+    <%= f.text_field :college_level_name %>
+  </div>
+
+  <div class="input-field col s6 offset-s4">
+    <%= f.label :degree_name %><br>
+    <%= f.select :degree_id, options_for_select(Degree.all.map{|cl|[cl.degree_name, cl.id]}), {} %>
+  </div>
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
